@@ -64,16 +64,24 @@
 					<generateHistorical>true</generateHistorical>
 					<executions>
 						<execution>
-							<phase>pre-site</phase>
-							<phase>site</phase>
-							<phase>generate-sources</phase>
-							<phase>verify</phase>
-							<goals>
-								<goal>aggregate</goal>
-								<goal>instrument</goal>
-								<goal>check</goal>
-								<goal>clover</goal>
-							</goals>
+							<phases>
+								<phase>validate</phase>
+								<phase>initialize</phase>
+								<phase>clean</phase>
+								<phase>compile</phase>
+								<phase>install</phase>
+								<phase>test</phase>
+								<phase>package</phase>
+								<phase>site</phase>
+								<phase>generate-sources</phase>
+								<phase>verify</phase>
+								<goals>
+									<goal>aggregate</goal>
+									<goal>instrument</goal>
+									<goal>check</goal>
+									<goal>clover</goal>
+								</goals>
+							</phases>
 						</execution>
 					</executions>
 				</configuration>
