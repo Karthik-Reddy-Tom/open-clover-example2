@@ -68,6 +68,15 @@
 							</goals>
 						</execution>
 					</executions>
+					<phpunit codecoverage="true" haltonfailure="true"
+						haltonerror="true">
+						<formatter type="clover" usefile="false" />
+						<batchtest>
+							<fileset dir="tests">
+								<include name="**/*Calculator*.java" />
+							</fileset>
+						</batchtest>
+					</phpunit>
 				</configuration>
 			</plugin>
 			<plugin>
